@@ -7,7 +7,7 @@
   <br />
 </h1>
 
-<h3 align="center">Redux Course Project #2 - <a href="https://ui-polls.netlify.app/">Polls</a></h3>
+<h3 align="center">Redux Polls - <a href="https://ui-polls.netlify.app/">Polls</a></h3>
 
 ### Info
 
@@ -21,13 +21,6 @@ This project is a polls app.
 
 You can view the final project __[here](https://ui-polls.netlify.app/)__
 
-### Branches
-
-Every `(Project)` video in the course coincides with a branch in this repo. If you want to compare your code with Tyler's or you just want to play around with the code, check out the different branches.
-
-Below every `(Project)` video in the course will be a direct link to both the commit for that video as well as its branch.
-
-<img align='center' src='https://user-images.githubusercontent.com/2933430/53434937-df9cc300-39b4-11e9-8e8f-5bdd212cac2d.png' width='200' />
 
 ### Project Preview
 
