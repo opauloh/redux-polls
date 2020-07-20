@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
 import { useEffect } from 'react'
 import Dashboard from './Dashboard'
-import { BrowserRouter as Router } from 'react-router-dom'
+import Nav from './Nav'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import AddPoll from './AddPoll'
+import Leaderboard from './Leaderboard'
+import Poll from './Poll'
 
 export default function App() {
   const dispatch = useDispatch()
@@ -13,11 +17,27 @@ export default function App() {
     dispatch(handleInitialData())
   }, [dispatch])
 
-  const store = useSelector((store) => store)
-  console.log('store', store)
   return (
     <Router>
-      <div className="container">{loading ? null : <Dashboard />}</div>
+      <div className="container">
+        <Nav />
+        {loading ? null : (
+          <div>
+            <Route path="/" exact>
+              <Dashboard />
+            </Route>
+            <Route path="/leaderboard">
+              <Leaderboard />
+            </Route>
+            <Route path="/polls/:id">
+              <Poll />
+            </Route>
+            <Route path="/add">
+              <AddPoll />
+            </Route>
+          </div>
+        )}
+      </div>
     </Router>
   )
 }
